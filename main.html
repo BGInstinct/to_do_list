@@ -5,9 +5,14 @@
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
-  <p>Todo List</p>
-  <input placeholder="Todo name" class="js-name-input">
-  <button onclick="addTodo()">Add</button>
+  <p><div class="title"><a></a>Todo List</div></p>
+  <div class="todo-input-grid">
+    <input placeholder="Todo name" class="js-name-input name-input">
+    <input type="date" class="js-date-input date-input">
+    <button onclick="addTodo()" class="add-todo-button">Add</button>
+  </div>
+  <div class="js-todo-list-elements todo-grid"></div>
+
   <script src="main.js"></script>
 </body>
 </html>
