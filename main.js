@@ -2,20 +2,17 @@ const todoList = [];
 
 function updateTodoList() {
   let todoListHTML = '';
-
-  for (let i = 0; i < todoList.length; i++) {
-    const element = todoList[i];
-    const {name, date} = element
+  todoList.forEach(function(element, index) {
+    const { name, date } = element
     const html = `
     <div> ${name}</div>
     <div> ${date}</div>
-    <button class="delete" onclick="todoList.splice(${i}, 1); 
+    <button class="delete" onclick="todoList.splice(${index}, 1); 
     updateTodoList();">
       Delete
     </button>`;
-
-  todoListHTML += html;
-  }
+    todoListHTML += html;
+  });
 
   document.querySelector('.js-todo-list-elements').innerHTML = todoListHTML;
 }
